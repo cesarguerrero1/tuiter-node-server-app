@@ -19,7 +19,6 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-
 //Pass our app to our controllers
 HelloController(app);
 UserController(app);
