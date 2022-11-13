@@ -8,6 +8,7 @@
 
 import express from "express";
 import cors from "cors";
+import mongoose from "mongoose";
 
 //Import our controller
 import HelloController from "./controllers/hello-controller.js";
@@ -18,6 +19,9 @@ import TuitController from "./controllers/tuits/tuits-controller.js";
 const app = express();
 app.use(express.json());
 app.use(cors());
+
+//Connect to our database
+mongoose.connect('mongodb://localhost:27017/tuiter');
 
 //Pass our app to our controllers
 HelloController(app);
