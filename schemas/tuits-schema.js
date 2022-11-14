@@ -14,8 +14,18 @@ tuits collection.
 const tuitsSchema = mongoose.Schema({
     //We are defining what data type will be expected for each key-value pair
     tuit: String,
-    likes: Number,
+    title: String,
+    topic: String,
+    username: String,
+    handle: String,
+    image: String,
+    time: String,
     liked: Boolean,
-}, {collectiion: "tuits"});
+    replies: Number,
+    retuits: Number,
+    likes: Number,
+    disliked: Boolean,
+    dislikes: Number, 
+}, {collection: "tuits"});
 
 export default tuitsSchema

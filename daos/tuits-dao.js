@@ -29,7 +29,7 @@ function deleteTuit(tid){
 }
 
 function updateTuit(tid, tuit){
-    return tuitsModel.updateOne({_id: tid}, {$set: tuit});
+    return tuitsModel.updateOne({_id: tid}, {$set: {...tuit}});
 }
 
 export {findTuits, findTuitsById, createTuit, deleteTuit, updateTuit}
